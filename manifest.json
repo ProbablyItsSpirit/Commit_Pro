@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Commit Pro",
+  "version": "1.0",
+  "description": "AI-powered summaries for GitHub commits.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://github.com/*", "http://localhost:*/*"],
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["https://github.com/*/*/commit/*"],
+    "run_at": "document_end"
+  }],
+  "icons": {
+    "128": "icon.png" 
+  }
+}
